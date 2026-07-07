@@ -1,0 +1,15 @@
+{
+  "name": "Calculator by MUSA",
+  "short_name": "MUSA's Calculator",
+  "start_url": "Calculator by MUSA.html",
+  "display": "standalone",
+  "background_color": "#050816",
+  "theme_color": "#00e5ff",
+  "icons": [
+    {
+      "src": "personal website of MUSA.html/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

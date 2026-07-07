@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator by MUSA</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#050816">
+    <link rel="stylesheet" href="Calculator by MUSA.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<style>
+    
+</style>
+<body>
+
+<div class="calculator">
+
+    <h2>Calculator by MUSA</h2>
+<button id="themeBtn" onclick="toggleTheme()">☀️</button>
+    <div class="display">
+        <input type="text" id="screen" readonly>
+    </div>
+
+    <div class="buttons">
+
+        <button class="clear" onclick="clearScreen()">C</button>
+        <button onclick="deleteLast()">⌫</button>
+        <button onclick="appendValue('%')">%</button>
+        <button class="operator" onclick="appendValue('/')">÷</button>
+
+        <button onclick="appendValue('7')">7</button>
+        <button onclick="appendValue('8')">8</button>
+        <button onclick="appendValue('9')">9</button>
+        <button class="operator" onclick="appendValue('*')">×</button>
+
+        <button onclick="appendValue('4')">4</button>
+        <button onclick="appendValue('5')">5</button>
+        <button onclick="appendValue('6')">6</button>
+        <button class="operator" onclick="appendValue('-')">−</button>
+
+        <button onclick="appendValue('1')">1</button>
+        <button onclick="appendValue('2')">2</button>
+        <button onclick="appendValue('3')">3</button>
+        <button class="operator" onclick="appendValue('+')">+</button>
+
+        <button onclick="appendValue('0')">0</button>
+        <button onclick="appendValue('.')">.</button>
+        <button class="equal" onclick="calculate()">=</button>
+
+    </div>
+
+</div>
+
+
+<script>
+    
+if ("serviceWorker" in navigator) {
+
+    navigator.serviceWorker.register("service-worker.js")
+    .then(function(){
+        console.log("Service Worker Registered Successfully");
+    })
+    .catch(function(error){
+        console.log("Service Worker Registration Failed", error);
+    });
+
+}
+
+    function toggleTheme(){
+
+    document.body.classList.toggle("light");
+
+    let btn=document.getElementById("themeBtn");
+
+    if(document.body.classList.contains("light")){
+        btn.innerHTML="🌙";
+    }
+    else{
+        btn.innerHTML="☀️";
+    }
+}
+    let screen = document.getElementById("screen");
+
+function appendValue(value){
+    screen.value += value;
+}
+
+function clearScreen(){
+    screen.value = "";
+}
+
+function deleteLast(){
+    screen.value = screen.value.slice(0, -1);
+}
+
+function calculate(){
+    try{
+        let result = eval(screen.value);
+        screen.value = result;
+    }
+    catch(error){
+        screen.value = "Error";
+    }
+}</script>
+
+</body>
+</html>

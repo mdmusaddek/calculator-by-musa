@@ -1,4 +1,4 @@
-const cacheName = "calculator-by-musa-v1";
+const cacheName = "calculator-by-musa-v2";
 
 const filesToCache = [
     "index.html",

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mdmusaddek.github.io/Calculator-by-MUSA/sitemap.xml
+Sitemap: https://mdmusaddek.github.io/calculator-by-musa/sitemap.xml

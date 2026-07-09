@@ -2,7 +2,7 @@ const cacheName = "calculator-by-musa-v2";
 
 const filesToCache = [
     "index.html",
-    "style.css",
+    "index.css",
     "script.js",
     "manifest.json"
 ];

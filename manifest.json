@@ -1,8 +1,8 @@
 {
   "name": "Calculator by MUSA",
   "short_name": "MUSA's Calculator",
-  "start_url": "/Calculator-by-MUSA/",
-  "scope": "/Calculator-by-MUSA/",
+  "start_url": "/calculator-by-musa/",
+  "scope": "/calculator-by-musa/",
   "display": "standalone",
   "background_color": "#050816",
   "theme_color": "#00e5ff",
